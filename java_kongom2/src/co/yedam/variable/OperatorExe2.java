@@ -15,17 +15,17 @@ public class OperatorExe2 {
 	 	while(run) {
 	 		
 	 	 	int menu = Integer.parseInt(scn.nextLine());
-	 	 	int input = Integer.parseInt(scn.nextLine());
 	 	 	if(menu == 1) {
-	 	 		System.out.println("입금액 입력 >>> ");
-	 	 		if (run ) {
-	 	 			System.out.print("입금액 : " + input);
-	 	 			
-	 	 		int result = balance + input;
-	 	 			System.out.print("예금총액 : " + result);	
-	 	 		} else  {
-	 	 			
-	 	 		}
+	 	 		System.out.println("현재 잔액은 " + balance + "입니다.");
+	 	 		 if(balance < 0 || balance > 100000) {
+	 	 			 int input = Integer.parseInt(scn.nextLine());
+	 	 			int result = input + balance;
+	 	 			System.out.println("현재 잔액" +  result);
+	 	 			if (result > 100000) {
+	 	 				break;
+	 	 			}
+	 	 			break;
+	 	 		 } 
 	 	 		// 코드 작성
 	 	 	} else if(menu ==2) {
 	 	 		System.out.print("출금액 입력 >>> ");
